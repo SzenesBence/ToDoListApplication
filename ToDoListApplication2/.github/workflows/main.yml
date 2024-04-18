@@ -18,7 +18,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-          cache: 'maven'
+          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+          settings-path: ${{ github.workspace }} # location for the settings.xml file
       - name: Build and publish with Maven
         run: |
           VERSION=$(./build/create-semver.sh spring-core/pom.xml "${{github.run_number}}")
