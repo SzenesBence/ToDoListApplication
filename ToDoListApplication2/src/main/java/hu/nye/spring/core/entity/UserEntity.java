@@ -22,7 +22,7 @@ public class UserEntity {
     private String password;
 
     @OneToMany
-private List<Todo> todoList=new ArrayList<>();
+private List<TodoEntity> todoList=new ArrayList<>();
 
 
 }

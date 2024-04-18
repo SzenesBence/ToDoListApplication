@@ -1,6 +1,6 @@
 package hu.nye.spring.core.request;
 
-import hu.nye.spring.core.entity.Todo;
+import hu.nye.spring.core.entity.TodoEntity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.*;
@@ -21,6 +21,6 @@ public class UserRequest {
     private String password;
 
     @OneToMany
-    private List<Todo> todoList=new ArrayList<>();
+    private List<TodoEntity> todoList=new ArrayList<>();
 
 }

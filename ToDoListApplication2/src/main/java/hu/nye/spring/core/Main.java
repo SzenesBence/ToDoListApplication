@@ -1,6 +1,6 @@
 package hu.nye.spring.core;
 
-import hu.nye.spring.core.entity.Todo;
+import hu.nye.spring.core.entity.TodoEntity;
 import hu.nye.spring.core.entity.UserEntity;
 import hu.nye.spring.core.repository.TodoRepository;
 import hu.nye.spring.core.repository.UserRepository;
@@ -32,7 +32,7 @@ public class Main implements CommandLineRunner {
         userEntity.setPassword("password");
         userEntity.setUsername("John");
 
-        Todo todo = new Todo();
+        TodoEntity todo = new TodoEntity();
         todo.setId(1L);
         todo.setContent("Finish mapping");
         userEntity.getTodoList().add(todo);

@@ -1,8 +1,6 @@
 package hu.nye.spring.core.controller;
 
 import hu.nye.spring.core.entity.UserEntity;
-import hu.nye.spring.core.repository.TodoRepository;
-import hu.nye.spring.core.repository.UserRepository;
 import hu.nye.spring.core.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
