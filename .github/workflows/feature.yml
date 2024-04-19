@@ -24,7 +24,7 @@ jobs:
     - name: Build and publish with Maven
       run: |
         VERSION=$(./build/create-semver.sh ToDoListApplication2/pom.xml "${{github.run_number}}-$GITHUB_SHA")
-        mvn -B versions:set -DnewVersion="${VERSION}" --file spring-core/pom.xml
-        mvn -B package --file spring-core/pom.xml
+        mvn -B versions:set -DnewVersion="${VERSION}" --file ToDoListApplication2/pom.xml
+        mvn -B package --file ToDoListApplication2/pom.xml
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
