@@ -9,8 +9,6 @@ import lombok.*;
 @Setter
 @Builder
 public class TodoRequest {
-    @Id
-    private Long id;
     private String content;
     private boolean completed=Boolean.FALSE;
 }

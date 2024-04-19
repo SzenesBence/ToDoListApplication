@@ -1,7 +1,12 @@
 package hu.nye.spring.core.controller;
 
+import hu.nye.spring.core.entity.TodoEntity;
 import hu.nye.spring.core.entity.UserEntity;
+import hu.nye.spring.core.request.TodoRequest;
+import hu.nye.spring.core.request.UserRequest;
+import hu.nye.spring.core.service.TodoService;
 import hu.nye.spring.core.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +15,8 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     @Autowired
     UserService userService;
-
+    @Autowired
+    TodoService todoService;
 
     @GetMapping("/{userId}")
     public UserEntity getUserById(@PathVariable Long userId){
@@ -18,7 +24,10 @@ public class UserController {
     }
 
    @PostMapping
-    public UserEntity addUser(@RequestBody UserEntity userEntity){
-        return userService.addUser(userEntity);
+    public UserEntity addUser(@RequestBody UserRequest userRequest){
+        return userService.addUser(userRequest);
     }
+
+
+
 }

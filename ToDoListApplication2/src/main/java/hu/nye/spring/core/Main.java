@@ -28,12 +28,12 @@ public class Main implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         UserEntity userEntity=new UserEntity();
-        userEntity.setId(1L);
+
         userEntity.setPassword("password");
         userEntity.setUsername("John");
 
         TodoEntity todo = new TodoEntity();
-        todo.setId(1L);
+
         todo.setContent("Finish mapping");
         userEntity.getTodoList().add(todo);
 

@@ -14,13 +14,8 @@ import java.util.List;
 @Setter
 @Builder
 public class UserRequest {
-    @Id
-    private Long id;
-
     private String username;
     private String password;
 
-    @OneToMany
-    private List<TodoEntity> todoList=new ArrayList<>();
 
 }
