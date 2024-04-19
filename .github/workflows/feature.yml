@@ -23,7 +23,7 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
     - name: Build and publish with Maven
       run: |
-        VERSION=$(./build/create-semver.sh spring-core/pom.xml "${{github.run_number}}-$GITHUB_SHA")
+        VERSION=$(./build/create-semver.sh ToDoListApplication2/pom.xml "${{github.run_number}}-$GITHUB_SHA")
         mvn -B versions:set -DnewVersion="${VERSION}" --file spring-core/pom.xml
         mvn -B package --file spring-core/pom.xml
       env:
