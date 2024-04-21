@@ -9,10 +9,32 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class TodoService implements ITodoService {
-    @Autowired
-    UserRepository userRepository;
 @Autowired
     TodoRepository todoRepository;
+@Autowired
+UserRepository userRepository;
+    @Override
+    public void addTodo(Long userId, TodoRequest todoRequest) {
+        UserEntity userEntity = userRepository.findById(userId).orElseThrow();
+        TodoEntity todoEntity = new TodoEntity();
+        todoEntity.setContent(todoRequest.getContent());
+//todoEntity. nek átadni majd a dátumot!!
+        userEntity.getTodoList().add(todoEntity);
+        todoRepository.save(todoEntity);
+    }
 
+    @Override
+    public void toogleTodoCompleted(Long todoId) {
+        TodoEntity todoEntity = todoRepository.findById(todoId).orElseThrow();
+        todoEntity.setCompleted(!todoEntity.getCompleted());
+        todoRepository.save(todoEntity);
+    }
 
+    @Override
+    public void deleteTodo(Long userId, Long todoId) {
+        UserEntity userEntity = userRepository.findById(userId).orElseThrow();
+        TodoEntity todoEntity = todoRepository.findById(todoId).orElseThrow();
+        userEntity.getTodoList().remove(todoEntity);
+        todoRepository.delete(todoEntity);
+    }
 }

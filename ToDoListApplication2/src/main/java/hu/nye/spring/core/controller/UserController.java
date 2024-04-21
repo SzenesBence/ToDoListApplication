@@ -1,6 +1,5 @@
 package hu.nye.spring.core.controller;
 
-import hu.nye.spring.core.entity.TodoEntity;
 import hu.nye.spring.core.entity.UserEntity;
 import hu.nye.spring.core.request.TodoRequest;
 import hu.nye.spring.core.request.UserRequest;
@@ -26,6 +25,23 @@ public class UserController {
    @PostMapping
     public UserEntity addUser(@RequestBody UserRequest userRequest){
         return userService.addUser(userRequest);
+    }
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable Long userId){
+ userService.deleteUser(userId);
+    }
+
+    @PostMapping("/{userId}/todos")
+    public void addTodo(@PathVariable Long userId, @RequestBody TodoRequest todoRequest){
+   todoService.addTodo(userId,todoRequest);
+    }
+    @PostMapping("/todos/{todoId}")
+    public void toggleTodoCompleted( @PathVariable Long todoId) {
+        todoService.toogleTodoCompleted(todoId);
+    }
+    @DeleteMapping("{userId}/todos/{todoId}")
+    public void deleteTodo(@PathVariable Long userId,@PathVariable Long todoId){
+        todoService.deleteTodo(userId,todoId);
     }
 
 

@@ -22,4 +22,9 @@ public class UserService implements IUserService{
         return userRepository.save(userEntity);
     }
 
+    @Override
+    public void deleteUser(Long userID) {
+        UserEntity userEntity = userRepository.findById(userID).orElseThrow();
+        userRepository.delete(userEntity);
+    }
 }

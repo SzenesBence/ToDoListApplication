@@ -19,11 +19,9 @@ public class TodoEntity {
     private Long id;
 
     private String content;
-
     private boolean completed=Boolean.FALSE;
 
     public Boolean getCompleted() {
         return completed;
     }
-
 }
