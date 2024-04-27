@@ -1,10 +1,10 @@
 package hu.nye.spring.core.entity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jdk.jfr.BooleanFlag;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.Date;
+
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,4 +24,7 @@ public class TodoEntity {
     public Boolean getCompleted() {
         return completed;
     }
+
+    @JsonFormat(pattern = "yyyy.MM.dd HH:mm:ss")
+    private Date date;
 }

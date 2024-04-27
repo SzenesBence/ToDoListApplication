@@ -3,6 +3,9 @@ package hu.nye.spring.core.request;
 import jakarta.persistence.Id;
 import lombok.*;
 
+import java.util.Date;
+
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -11,4 +14,5 @@ import lombok.*;
 public class TodoRequest {
     private String content;
     private boolean completed=Boolean.FALSE;
+    private Date date;
 }

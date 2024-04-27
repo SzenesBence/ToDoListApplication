@@ -18,7 +18,7 @@ UserRepository userRepository;
         UserEntity userEntity = userRepository.findById(userId).orElseThrow();
         TodoEntity todoEntity = new TodoEntity();
         todoEntity.setContent(todoRequest.getContent());
-//todoEntity. nek átadni majd a dátumot!!
+        todoEntity.setDate(todoRequest.getDate());
         userEntity.getTodoList().add(todoEntity);
         todoRepository.save(todoEntity);
     }

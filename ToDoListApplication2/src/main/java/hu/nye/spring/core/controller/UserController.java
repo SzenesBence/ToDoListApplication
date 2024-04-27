@@ -26,6 +26,7 @@ public class UserController {
     public UserEntity addUser(@RequestBody UserRequest userRequest){
         return userService.addUser(userRequest);
     }
+
     @DeleteMapping("/{userId}")
     public void deleteUser(@PathVariable Long userId){
  userService.deleteUser(userId);
@@ -39,6 +40,7 @@ public class UserController {
     public void toggleTodoCompleted( @PathVariable Long todoId) {
         todoService.toogleTodoCompleted(todoId);
     }
+
     @DeleteMapping("{userId}/todos/{todoId}")
     public void deleteTodo(@PathVariable Long userId,@PathVariable Long todoId){
         todoService.deleteTodo(userId,todoId);
