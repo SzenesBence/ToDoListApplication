@@ -20,9 +20,11 @@ jobs:
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
+    - name: Grant execute permission to script
+      run: chmod +x ./build/create-semver.sh
     - name: Build and publish with Maven
       run: |
-        VERSION=$(./build/create-semver.sh ToDoListApplication/ToDoListApplication2/pom.xml "${{github.run_number}}")
+        VERSION=$(./build/create-semver.sh ToDoListApplication2/pom.xml "${{github.run_number}}")
         mvn -B versions:set -DnewVersion="${VERSION}" --file ToDoListApplication2/pom.xml
         mvn -B package --file ToDoListApplication2/pom.xml
       env:
