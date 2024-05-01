@@ -2,7 +2,6 @@ package hu.nye.spring.core.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +17,7 @@ public class UserEntity {
     private Long id;
 
     private String username;
+
     private String password;
 
     @OneToMany
