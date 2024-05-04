@@ -1,5 +1,6 @@
 package hu.nye.spring.core.controller;
 
+import hu.nye.spring.core.entity.TodoEntity;
 import hu.nye.spring.core.entity.UserEntity;
 import hu.nye.spring.core.request.TodoRequest;
 import hu.nye.spring.core.request.UserRequest;
@@ -45,7 +46,6 @@ public class UserController {
     public void deleteTodo(@PathVariable Long userId,@PathVariable Long todoId){
         todoService.deleteTodo(userId,todoId);
     }
-
-
-
+    @GetMapping("{userId}/todos/{todoId}")
+        public TodoEntity getTodoByID(@PathVariable Long todoId){ return todoService.getTodoByID(todoId);}
 }

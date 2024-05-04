@@ -5,12 +5,15 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
 @Builder
 @Entity
+
+
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -16,7 +16,13 @@ public class TodoService implements ITodoService {
 @Autowired
 UserRepository userRepository;
 
-@SneakyThrows
+    @SneakyThrows
+    @Override
+    public TodoEntity getTodoByID(Long todoId) {
+        return todoRepository.findById(todoId).orElseThrow(UserNotFoundException::new);
+    }
+
+    @SneakyThrows
     @Override
     public void addTodo(Long userId, TodoRequest todoRequest) {
         UserEntity userEntity = userRepository.findById(userId).orElseThrow(UserNotFoundException::new);
