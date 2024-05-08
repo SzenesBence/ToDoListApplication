@@ -15,4 +15,6 @@ public class TodoRequest {
     private String content;
     private boolean completed=Boolean.FALSE;
     private Date date;
+
+
 }

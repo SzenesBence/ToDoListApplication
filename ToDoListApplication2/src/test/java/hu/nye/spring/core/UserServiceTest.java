@@ -1,5 +1,4 @@
 package hu.nye.spring.core;
-
 import hu.nye.spring.core.entity.UserEntity;
 import hu.nye.spring.core.exception.UserNotFoundException;
 import hu.nye.spring.core.repository.UserRepository;
@@ -12,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import java.util.Optional;
-
 import static org.junit.Assert.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
@@ -39,10 +36,6 @@ public class UserServiceTest {
         when(userRepository.findById(1L)).thenReturn(Optional.of(userEntity));
         when(userRepository.save(any(UserEntity.class))).thenReturn(userEntity);
     }
-
-
-
-
     @Test
     public void getUserById_UserExists_ShouldReturnUserEntity() {
         // GIVEN
@@ -96,6 +89,3 @@ public class UserServiceTest {
         verify(userRepository).delete(userEntity);
     }
 }
-
-
-

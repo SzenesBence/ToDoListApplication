@@ -2,32 +2,6 @@
 <checkstyle version="9.3">
 <file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\controller\ExceptionHanderController.java">
 </file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\controller\UserController.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\entity\TodoEntity.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\entity\UserEntity.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\exception\UserNotFoundException.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\Main.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\repository\TodoRepository.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\repository\UserRepository.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\request\TodoRequest.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\request\UserRequest.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\ITodoService.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\IUserService.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\TodoService.java">
-</file>
-<file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\UserService.java">
-</file>
 <file name="C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\resources\application.properties">
 </file>
 </checkstyle>
