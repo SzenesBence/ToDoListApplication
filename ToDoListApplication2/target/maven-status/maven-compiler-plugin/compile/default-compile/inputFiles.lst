@@ -1,0 +1,14 @@
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\Main.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\entity\TodoEntity.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\request\UserRequest.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\controller\ExceptionHanderController.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\IUserService.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\repository\UserRepository.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\exception\UserNotFoundException.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\TodoService.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\entity\UserEntity.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\UserService.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\request\TodoRequest.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\repository\TodoRepository.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\service\ITodoService.java
+C:\JAVA GYAKORLATOK\TODOLISTMUNKA\ToDoListApplication2\src\main\java\hu\nye\spring\core\controller\UserController.java
