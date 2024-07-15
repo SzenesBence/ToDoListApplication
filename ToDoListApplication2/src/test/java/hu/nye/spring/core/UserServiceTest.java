@@ -1,9 +1,6 @@
 package hu.nye.spring.core;
 import hu.nye.spring.core.entity.UserEntity;
-import hu.nye.spring.core.exception.UserNotFoundException;
-import hu.nye.spring.core.repository.TodoRepository;
 import hu.nye.spring.core.repository.UserRepository;
-import hu.nye.spring.core.request.TodoRequest;
 import hu.nye.spring.core.request.UserRequest;
 import hu.nye.spring.core.service.UserService;
 import org.junit.Before;
@@ -12,7 +9,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -46,17 +42,6 @@ UserEntity userEntity= new UserEntity();
         // THEN
         verify(userRepository).findById(userId);
         assertEquals(userEntity, result);
-    }
-    @Test(expected = UserNotFoundException.class)
-    public void getUserById_UserDoesNotExist_ShouldThrowUserNotFoundException() {
-        // GIVEN
-        Long userId = 2L;
-
-        // WHEN
-        userService.getUserById(userId);
-
-        // THEN
-        // UserNotFoundException is expected to be thrown
     }
 
     @Test

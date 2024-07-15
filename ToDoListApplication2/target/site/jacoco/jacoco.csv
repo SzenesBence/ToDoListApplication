@@ -1,0 +1,15 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+ToDolistApplication,hu.nye.spring.core.request,UserRequest.UserRequestBuilder,27,0,0,0,1,0,5,0,5,0
+ToDolistApplication,hu.nye.spring.core.request,TodoRequest.TodoRequestBuilder,37,0,0,0,1,0,6,0,6,0
+ToDolistApplication,hu.nye.spring.core.request,TodoRequest,48,0,0,0,7,0,9,0,9,0
+ToDolistApplication,hu.nye.spring.core.request,UserRequest,30,0,0,0,6,0,7,0,7,0
+ToDolistApplication,hu.nye.spring.core.entity,UserEntity,60,0,0,0,9,0,11,0,11,0
+ToDolistApplication,hu.nye.spring.core.entity,UserEntity.UserEntityBuilder,46,0,0,0,1,0,7,0,7,0
+ToDolistApplication,hu.nye.spring.core.entity,TodoEntity.TodoEntityBuilder,46,0,0,0,1,0,7,0,7,0
+ToDolistApplication,hu.nye.spring.core.entity,TodoEntity,59,0,0,0,9,0,11,0,11,0
+ToDolistApplication,hu.nye.spring.core.exception,UserNotFoundException,3,0,0,0,1,0,1,0,1,0
+ToDolistApplication,hu.nye.spring.core,Main,12,0,0,0,6,0,2,0,2,0
+ToDolistApplication,hu.nye.spring.core.controller,ExceptionHanderController,4,0,0,0,2,0,2,0,2,0
+ToDolistApplication,hu.nye.spring.core.controller,UserController,40,0,0,0,12,0,8,0,8,0
+ToDolistApplication,hu.nye.spring.core.service,UserService,49,0,0,0,11,0,4,0,4,0
+ToDolistApplication,hu.nye.spring.core.service,TodoService,106,0,2,0,22,0,6,0,5,0

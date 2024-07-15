@@ -1,5 +1,5 @@
-#Mon May 20 13:56:13 CEST 2024
-C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\Main.java=1713551180995
+#Mon Jul 15 19:38:29 CEST 2024
+C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\Main.java=1716388863097
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\controller\\ExceptionHanderController.java=1714811600495
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\controller\\UserController.java=1714806588556
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\entity\\TodoEntity.java=1714228190096
@@ -8,7 +8,7 @@ C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\repository\\TodoRepository.java=1713008512009
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\repository\\UserRepository.java=1711652349818
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\request\\TodoRequest.java=1715191964854
-C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\request\\UserRequest.java=1713551037026
+C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\request\\UserRequest.java=1721065082217
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\service\\ITodoService.java=1714806588434
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\service\\IUserService.java=1713707204385
 C\:\\JAVA\ GYAKORLATOK\\TODOLISTMUNKA\\ToDoListApplication2\\src\\main\\java\\hu\\nye\\spring\\core\\service\\TodoService.java=1714806588597

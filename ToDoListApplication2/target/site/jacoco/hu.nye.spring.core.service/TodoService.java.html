@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TodoService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ToDolistApplication</a> &gt; <a href="index.source.html" class="el_package">hu.nye.spring.core.service</a> &gt; <span class="el_source">TodoService.java</span></div><h1>TodoService.java</h1><pre class="source lang-java linenums">package hu.nye.spring.core.service;
+import hu.nye.spring.core.entity.TodoEntity;
+import hu.nye.spring.core.entity.UserEntity;
+import hu.nye.spring.core.exception.UserNotFoundException;
+import hu.nye.spring.core.repository.TodoRepository;
+import hu.nye.spring.core.repository.UserRepository;
+import hu.nye.spring.core.request.TodoRequest;
+import lombok.SneakyThrows;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+<span class="nc" id="L13">public class TodoService implements ITodoService {</span>
+@Autowired
+    TodoRepository todoRepository;
+@Autowired
+UserRepository userRepository;
+
+<span class="nc" id="L19">    @SneakyThrows</span>
+    @Override
+    public TodoEntity getTodoByID(Long todoId) {
+<span class="nc" id="L22">        return todoRepository.findById(todoId).orElseThrow(UserNotFoundException::new);</span>
+    }
+
+<span class="nc" id="L25">    @SneakyThrows</span>
+    @Override
+    public void addTodo(Long userId, TodoRequest todoRequest) {
+<span class="nc" id="L28">        UserEntity userEntity = userRepository.findById(userId).orElseThrow(UserNotFoundException::new);</span>
+<span class="nc" id="L29">        TodoEntity todoEntity = new TodoEntity();</span>
+<span class="nc" id="L30">        todoEntity.setContent(todoRequest.getContent());</span>
+<span class="nc" id="L31">        todoEntity.setDate(todoRequest.getDate());</span>
+<span class="nc" id="L32">        userEntity.getTodoList().add(todoEntity);</span>
+<span class="nc" id="L33">        todoRepository.save(todoEntity);</span>
+<span class="nc" id="L34">    }</span>
+<span class="nc" id="L35">    @SneakyThrows</span>
+    @Override
+    public void toogleTodoCompleted(Long todoId) {
+<span class="nc" id="L38">        TodoEntity todoEntity = todoRepository.findById(todoId).orElseThrow(UserNotFoundException::new);</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        todoEntity.setCompleted(!todoEntity.getCompleted());</span>
+<span class="nc" id="L40">        todoRepository.save(todoEntity);</span>
+<span class="nc" id="L41">    }</span>
+<span class="nc" id="L42">    @SneakyThrows</span>
+    @Override
+    public void deleteTodo(Long userId, Long todoId) {
+<span class="nc" id="L45">        UserEntity userEntity = userRepository.findById(userId).orElseThrow(UserNotFoundException::new);</span>
+<span class="nc" id="L46">        TodoEntity todoEntity = todoRepository.findById(todoId).orElseThrow(UserNotFoundException::new);</span>
+<span class="nc" id="L47">        userEntity.getTodoList().remove(todoEntity);</span>
+<span class="nc" id="L48">        todoRepository.delete(todoEntity);</span>
+<span class="nc" id="L49">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

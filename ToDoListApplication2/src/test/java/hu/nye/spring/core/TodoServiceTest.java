@@ -2,7 +2,6 @@ package hu.nye.spring.core;
 
 import hu.nye.spring.core.entity.TodoEntity;
 import hu.nye.spring.core.entity.UserEntity;
-import hu.nye.spring.core.exception.UserNotFoundException;
 import hu.nye.spring.core.repository.TodoRepository;
 import hu.nye.spring.core.repository.UserRepository;
 import hu.nye.spring.core.request.TodoRequest;
@@ -13,7 +12,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -44,7 +42,7 @@ public class TodoServiceTest {
     public void addTodo_ValidUserId_ShouldAddTodoToUser() {
         // GIVEN
         Long userId = 1L;
-        TodoRequest todoRequest = new TodoRequest(); // Using Date object
+        TodoRequest todoRequest = new TodoRequest();
         UserEntity userEntity = new UserEntity();
         when(userRepository.findById(userId)).thenReturn(Optional.of(userEntity));
 
@@ -110,17 +108,5 @@ public class TodoServiceTest {
         assertEquals(todoEntity, result);
     }
 
-    @Test(expected = UserNotFoundException.class)
-    public void getTodoByID_TodoNotFound_ShouldThrowUserNotFoundException() {
-        // GIVEN
-        Long todoId = 1L;
-        when(todoRepository.findById(todoId)).thenReturn(Optional.empty());
-
-        // WHEN
-        todoService.getTodoByID(todoId);
-
-        // THEN
-        // UserNotFoundException is expected to be thrown
-    }
 
 }

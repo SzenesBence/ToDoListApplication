@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UserController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">ToDolistApplication</a> &gt; <a href="index.source.html" class="el_package">hu.nye.spring.core.controller</a> &gt; <span class="el_source">UserController.java</span></div><h1>UserController.java</h1><pre class="source lang-java linenums">package hu.nye.spring.core.controller;
+
+import hu.nye.spring.core.entity.TodoEntity;
+import hu.nye.spring.core.entity.UserEntity;
+import hu.nye.spring.core.request.TodoRequest;
+import hu.nye.spring.core.request.UserRequest;
+import hu.nye.spring.core.service.TodoService;
+import hu.nye.spring.core.service.UserService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+@RestController
+@RequestMapping(&quot;/users&quot;)
+<span class="nc" id="L15">public class UserController {</span>
+    @Autowired
+    UserService userService;
+    @Autowired
+    TodoService todoService;
+
+    @GetMapping(&quot;/{userId}&quot;)
+    public UserEntity getUserById(@PathVariable Long userId){
+<span class="nc" id="L23">            return userService.getUserById(userId);</span>
+    }
+
+   @PostMapping
+    public UserEntity addUser(@RequestBody UserRequest userRequest){
+<span class="nc" id="L28">        return userService.addUser(userRequest);</span>
+    }
+
+    @DeleteMapping(&quot;/{userId}&quot;)
+    public void deleteUser(@PathVariable Long userId){
+<span class="nc" id="L33"> userService.deleteUser(userId);</span>
+<span class="nc" id="L34">    }</span>
+
+    @PostMapping(&quot;/{userId}/todos&quot;)
+    public void addTodo(@PathVariable Long userId, @RequestBody TodoRequest todoRequest){
+<span class="nc" id="L38">   todoService.addTodo(userId,todoRequest);</span>
+<span class="nc" id="L39">    }</span>
+    @PostMapping(&quot;/todos/{todoId}&quot;)
+    public void toggleTodoCompleted( @PathVariable Long todoId) {
+<span class="nc" id="L42">        todoService.toogleTodoCompleted(todoId);</span>
+<span class="nc" id="L43">    }</span>
+
+    @DeleteMapping(&quot;{userId}/todos/{todoId}&quot;)
+    public void deleteTodo(@PathVariable Long userId,@PathVariable Long todoId){
+<span class="nc" id="L47">        todoService.deleteTodo(userId,todoId);</span>
+<span class="nc" id="L48">    }</span>
+    @GetMapping(&quot;{userId}/todos/{todoId}&quot;)
+<span class="nc" id="L50">        public TodoEntity getTodoByID(@PathVariable Long todoId){ return todoService.getTodoByID(todoId);}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
