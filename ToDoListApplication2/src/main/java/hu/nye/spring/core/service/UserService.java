@@ -4,6 +4,7 @@ import hu.nye.spring.core.entity.UserEntity;
 import hu.nye.spring.core.exception.UserNotFoundException;
 import hu.nye.spring.core.repository.UserRepository;
 import hu.nye.spring.core.request.UserRequest;
+import hu.nye.spring.core.security.BCrytpHashing;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,9 +22,10 @@ public class UserService implements IUserService{
 }
     @Override
     public UserEntity addUser( UserRequest userRequest){
+        String hashedPassword = BCrytpHashing.hashPassword(userRequest.getPassword());
         UserEntity userEntity = new UserEntity();
         userEntity.setUsername(userRequest.getUsername());
-        userEntity.setPassword(userRequest.getPassword());
+        userEntity.setPassword(hashedPassword);
         return userRepository.save(userEntity);
     }
 
